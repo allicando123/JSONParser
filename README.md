@@ -60,10 +60,16 @@ json.set("Hello");
 json.set("小明");
 json.set(123);
 
+// 基本类型对象有
+JsonNumber num;
+JsonBool bool;
+JsonNull nu;
+JsonString str;
+
 // 获取对象类型
 JsonDataBase.DataType type = json.getType();
 // type是枚举，可以通过类型比对获取到其类型，如
-type == DataType.Array;
+type == DataType.Number;
 
 // 将对象转化为字符串
 json.stringify();
