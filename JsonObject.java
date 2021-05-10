@@ -28,6 +28,18 @@ public class JsonObject extends JsonDataBase {
         return ((HashMap<String, JsonDataBase>)data).get(key);
     }
 
+    public JsonDataBase remove(String key) {
+        return ((HashMap<String, JsonDataBase>)data).remove(key);
+    }
+
+    public int size() {
+        return ((HashMap<String, JsonDataBase>)data).size();
+    }
+
+    public Iterator<Map.Entry<String,JsonDataBase>> getIterator() {
+        return ((HashMap<String, JsonDataBase>)data).entrySet().iterator();
+    }
+
     public String stringify() {
         String s = "{";
         Iterator iterator = ((HashMap)data).entrySet().iterator();

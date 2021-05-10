@@ -1,7 +1,5 @@
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.InputStreamReader;
-import java.io.Reader;
+import java.util.Iterator;
+import java.util.Map;
 
 public class JsonTest {
     public static void main(String[] args) {
@@ -26,5 +24,28 @@ public class JsonTest {
         arr.set(math);
 
         System.out.println(json.stringify());
+
+        chinese =  (JsonObject)arr.get(0);
+        chinese.set("分数", 125);
+
+        JsonObject english = new JsonObject();
+        english.set("分数", 120);
+        english.set("等级", "卓越");
+
+        arr.insert(0, english);
+
+        // [] 遍历
+        Iterator iterator = arr.getIterator();
+        while (iterator.hasNext()) {
+            System.out.println(((JsonDataBase)iterator.next()).stringify());
+        }
+
+        // {} 遍历
+        iterator = json.getIterator();
+        while (iterator.hasNext()) {
+            Map.Entry<String, JsonDataBase> entry = (Map.Entry<String, JsonDataBase>)iterator.next();
+            System.out.println(entry.getKey());
+            System.out.println(entry.getValue().stringify());
+        }
     }
 }

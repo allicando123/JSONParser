@@ -59,6 +59,9 @@ json.set("null", new JsonNull());
 json.set("Hello");
 json.set("小明");
 json.set(123);
+json.set(0, "hi"); // 修改索引为0的元素
+json.insert(0, "world"); // 在索引0处插入元素
+json.remove(0); // 删除索引为0的元素
 
 // 基本类型对象有
 JsonNumber num;
@@ -70,6 +73,12 @@ JsonString str;
 JsonDataBase.DataType type = json.getType();
 // type是枚举，可以通过类型比对获取到其类型，如
 type == DataType.Number;
+
+// 获取对象中数据数量
+json.size();
+
+// 获取迭代器
+json.getIterator();
 
 // 将对象转化为字符串
 json.stringify();
