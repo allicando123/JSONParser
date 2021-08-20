@@ -1,6 +1,6 @@
-public class JsonNull extends JsonDataBase {
+public class JSONNull extends JSONDataBase {
 
-    public JsonNull() {
+    public JSONNull() {
         this.type = DataType.Null;
         this.data = null;
     }

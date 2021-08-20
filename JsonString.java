@@ -1,5 +1,5 @@
-public class JsonString extends JsonDataBase {
-    public JsonString() {
+public class JSONString extends JSONDataBase {
+    public JSONString() {
         type = DataType.String;
         data = "";
     }

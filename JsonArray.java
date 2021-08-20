@@ -1,78 +1,78 @@
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class JsonArray extends JsonDataBase {
-    public JsonArray() {
+public class JSONArray extends JSONDataBase {
+    public JSONArray() {
         type = DataType.Array;
-        data = new ArrayList<JsonDataBase>();
+        data = new ArrayList<JSONDataBase>();
     }
 
     public void set(double value) {
-        JsonDataBase json = new JsonNumber();
+        JSONDataBase json = new JSONNumber();
         json.setValue(value);
-        ((ArrayList<JsonDataBase>)data).add(json);
+        ((ArrayList<JSONDataBase>)data).add(json);
     }
 
     public void set(String value) {
-        JsonDataBase json = new JsonString();
+        JSONDataBase json = new JSONString();
         json.setValue(value);
-        ((ArrayList<JsonDataBase>)data).add(json);
+        ((ArrayList<JSONDataBase>)data).add(json);
     }
 
-    public void set(JsonDataBase value) {
-        ((ArrayList<JsonDataBase>)data).add(value);
+    public void set(JSONDataBase value) {
+        ((ArrayList<JSONDataBase>)data).add(value);
     }
 
     public void set(int index, double value) {
-        JsonDataBase json = new JsonNumber();
+        JSONDataBase json = new JSONNumber();
         json.setValue(value);
-        ((ArrayList<JsonDataBase>)data).set(index, json);
+        ((ArrayList<JSONDataBase>)data).set(index, json);
     }
 
     public void set(int index, String value) {
-        JsonDataBase json = new JsonString();
+        JSONDataBase json = new JSONString();
         json.setValue(value);
-        ((ArrayList<JsonDataBase>)data).set(index, json);
+        ((ArrayList<JSONDataBase>)data).set(index, json);
     }
 
-    public void set(int index, JsonDataBase value) {
-        ((ArrayList<JsonDataBase>)data).set(index, value);
+    public void set(int index, JSONDataBase value) {
+        ((ArrayList<JSONDataBase>)data).set(index, value);
     }
 
-    public JsonDataBase remove(int index) {
-        return ((ArrayList<JsonDataBase>)data).remove(index);
+    public JSONDataBase remove(int index) {
+        return ((ArrayList<JSONDataBase>)data).remove(index);
     }
 
     public void insert(int index, double value) {
-        JsonDataBase json = new JsonNumber();
+        JSONDataBase json = new JSONNumber();
         json.setValue(value);
-        ((ArrayList<JsonDataBase>)data).add(index, json);
+        ((ArrayList<JSONDataBase>)data).add(index, json);
     }
 
     public void insert(int index, String value) {
-        JsonDataBase json = new JsonString();
+        JSONDataBase json = new JSONString();
         json.setValue(value);
-        ((ArrayList<JsonDataBase>)data).add(index, json);
+        ((ArrayList<JSONDataBase>)data).add(index, json);
     }
 
-    public void insert(int index, JsonDataBase value) {
-        ((ArrayList<JsonDataBase>)data).add(index, value);
+    public void insert(int index, JSONDataBase value) {
+        ((ArrayList<JSONDataBase>)data).add(index, value);
     }
 
-    public JsonDataBase get(int index) {
-        return ((ArrayList<JsonDataBase>)data).get(index);
+    public JSONDataBase get(int index) {
+        return ((ArrayList<JSONDataBase>)data).get(index);
     }
 
     public int size() {
-        return ((ArrayList<JsonDataBase>)data).size();
+        return ((ArrayList<JSONDataBase>)data).size();
     }
 
     public int indexOf(Object o) {
-        return ((ArrayList<JsonDataBase>)data).indexOf(o);
+        return ((ArrayList<JSONDataBase>)data).indexOf(o);
     }
 
-    public Iterator<JsonDataBase> getIterator() {
-        return ((ArrayList<JsonDataBase>)data).iterator();
+    public Iterator<JSONDataBase> getIterator() {
+        return ((ArrayList<JSONDataBase>)data).iterator();
     }
 
     public String stringify() {
@@ -80,7 +80,7 @@ public class JsonArray extends JsonDataBase {
         Iterator iterator = ((ArrayList)data).iterator();
 
         while (iterator.hasNext()) {
-            JsonDataBase entry = (JsonDataBase)iterator.next();
+            JSONDataBase entry = (JSONDataBase)iterator.next();
 
 
             s += entry.stringify();

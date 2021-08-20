@@ -1,6 +1,6 @@
-public class JsonBool extends JsonDataBase {
+public class JSONBool extends JSONDataBase {
 
-    public JsonBool() {
+    public JSONBool() {
         this.type = DataType.Bool;
         this.data = false;
     }

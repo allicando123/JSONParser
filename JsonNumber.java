@@ -1,5 +1,5 @@
-public class JsonNumber extends JsonDataBase {
-    public JsonNumber() {
+public class JSONNumber extends JSONDataBase {
+    public JSONNumber() {
         type = DataType.Number;
         data = (double)0;
     }

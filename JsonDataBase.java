@@ -1,4 +1,4 @@
-public abstract class JsonDataBase {
+public abstract class JSONDataBase {
     public enum DataType {
         None,
         String,
@@ -13,7 +13,7 @@ public abstract class JsonDataBase {
 
     protected Object data;
 
-    public JsonDataBase()
+    public JSONDataBase()
     {
         type = DataType.None;
     }
@@ -34,20 +34,20 @@ public abstract class JsonDataBase {
         return (boolean)data;
     }
 
-    public JsonNumber toJsonNumber() {
-        return (JsonNumber)this;
+    public JSONNumber toJsonNumber() {
+        return (JSONNumber)this;
     }
 
-    public JsonString toJsonString() {
-        return (JsonString)this;
+    public JSONString toJsonString() {
+        return (JSONString)this;
     }
 
-    public JsonObject toJsonObject() {
-        return (JsonObject)this;
+    public JSONObject toJsonObject() {
+        return (JSONObject)this;
     }
 
-    public JsonArray toJsonArray() {
-        return (JsonArray)this;
+    public JSONArray toJsonArray() {
+        return (JSONArray)this;
     }
 
     public boolean isNull() {
